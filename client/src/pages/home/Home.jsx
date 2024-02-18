@@ -1,10 +1,9 @@
-import React from 'react';
-import Banner from '../../conponents/Banner';
+import React from 'react'
+import Banner from '../../components/Banner';
 import Categories from './Categories';
-import SpecialProduct from './SpeciaProduct';
+import SpecialProduct from './SpecialProduct';
 import Testimonials from './Testimonials';
-import OurService from './OurService';
-
+import OurServices from './OurServices';
 
 
 const Home = () => {
@@ -14,7 +13,7 @@ const Home = () => {
         <Categories />
         <SpecialProduct />
         <Testimonials />
-        <OurService />
+        <OurServices />
     </div>
   )
 }
