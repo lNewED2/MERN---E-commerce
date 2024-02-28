@@ -7,7 +7,7 @@ const ProductList = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [sortOption, setSortOptions] = useState("default");
   const [currentPage, setCurrentPage] = useState(1);
-  const [itemsPerPage, setitemsPerPage] = useState(8);
+  const [itemsPerPage, setItemsPerPage] = useState(8);
   const [categories, setCategories] = useState([]);
 
   useEffect(() => {
@@ -93,8 +93,9 @@ const ProductList = () => {
               <button
                 key={index}
                 onClick={() => filterItem(category)}
-                className={`${selectedCategory === category ? "active" : ""
-                  } px-4 py-2 rounded-full`}
+                className={`${
+                  selectedCategory === category ? "active" : ""
+                } px-4 py-2 rounded-full`}
               >
                 <p className="capitalize">{category}</p>
               </button>
@@ -133,12 +134,13 @@ const ProductList = () => {
           return (
             <button
               key={index}
-              className={`mx-1 px-3 py-1 rounded-full ${currentPage === index + 1
+              className={`mx-1 px-3 py-1 rounded-full ${
+                currentPage === index +1
                   ? "bg-red-600 text-white"
                   : "bg-gray-200"
-                }`}
+              }`}
               onClick={() => {
-                paginate(index + 1);
+                paginate(index+1);
               }}
             >{index + 1}</button>
           );

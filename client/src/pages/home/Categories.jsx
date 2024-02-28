@@ -56,4 +56,4 @@ const Categories = () => {
     );
   };
   
-  export default Categories; 
+  export default Categories; // Removed the comment "check error"
