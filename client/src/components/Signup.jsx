@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import { useForm } from "react-hook-form";
 import { AuthContext } from "../context/AuthProvider";
 
+
 const Signup = () => {
     const {
       register,
@@ -31,6 +32,8 @@ const Signup = () => {
           console.log(error);
         });
       };
+
+    
   
     return (
         <div className="max-w-md bg-white shadow w-full mx-auto flex items-center justify-center my-20">
@@ -72,23 +75,12 @@ const Signup = () => {
 
             <p className="text-center my-2 ">
               Have an account ?{" "}
-              <Link to="/signup" className="underline text-red-700 ml-1">
+              <Link to="/signin" className="underline text-red-700 ml-1">
                 Login
               </Link>
             </p>
            
           </form>
-          <div className="text-center space-x-3 mb-5 ">
-            <button className="btn btn-ghost btn-circle hover:bg-red-700 hover:text-white ">
-              <SiGmail />
-            </button>
-            <button className="btn btn-ghost btn-circle hover:bg-red-700 hover:text-white ">
-              <FaFacebookF />
-            </button>
-            <button className="btn btn-ghost btn-circle hover:bg-red-700 hover:text-white ">
-              <FaGithub />
-            </button>
-          </div>
         </div>
         </div>
     );

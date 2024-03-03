@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Card from "../../components/Card";
+import Card from "../components/Card";
 
 const ProductList = () => {
   const [products, setProducts] = useState([]);
