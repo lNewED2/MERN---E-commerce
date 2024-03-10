@@ -15,11 +15,3 @@ const ProductSchema = new Schema(
 const ProductModel = model("Product", ProductSchema);
 module.exports = ProductModel;
 
- /*{
-      "_id": "1",
-      "name": "Trendy T-Shirt",
-      "description": "A stylish and comfortable t-shirt suitable for everyday wear.",
-      "price": 19.99,
-      "image": "https://cdn02.pinkoi.com/product/pw3J345G/0/1/640x530.jpg",
-      "category": "popular"
-    },*/
