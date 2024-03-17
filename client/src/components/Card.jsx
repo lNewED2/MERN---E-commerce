@@ -6,6 +6,7 @@ import axios from "axios";
 
 const Card = ({ item }) => {
   const { user } = useContext(AuthContext);
+  const [ cart, refresh] = useCart();
   const navigate = useNavigate();
   const location = useLocation();
   const { _id, name, image, price, description } = item;
@@ -34,7 +35,8 @@ const Card = ({ item }) => {
       console.log(cartItem);
       axios.post("http://localhost:4000/carts", cartItem)
         .then((response) => {
-          if (response.status === 200) {
+          if (response.status === 200 || response.status === 201 ) {
+            refresh();
             Swal.fire({
               title: "Product added on the cart",
               position: "center",
@@ -78,7 +80,7 @@ const Card = ({ item }) => {
         confirmButtonText: "Login Now",
       }).then((result) => {
         if (result.isConfirmed) {
-          navigate("/signin");
+          navigate("/signin",{state:{ from: location} });
         }
       });
     }

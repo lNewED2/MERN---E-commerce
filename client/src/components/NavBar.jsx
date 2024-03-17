@@ -5,6 +5,7 @@ import Profile from "./Profile";
 
 const Navbar = () => {
   const {user} = useContext(AuthContext);
+  console.log(user);
   const navItems = (
     <>
       <li>
